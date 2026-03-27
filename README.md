@@ -34,3 +34,8 @@ This repository demonstrates a practical implementation of Zero Trust enforcemen
 2. Install Python dependencies:
    ```bash
    pip install -r requirements.txt
+
+3. Update bicep/parameters.dev.json with your management group or subscription scope.
+4. Deploy policies: ./scripts/deploy-policies.ps1 -Location eastus -ManagementGroupId <mg-id>
+5. Run anomaly scoring: python ml-model/train_and_score.py --input data/sample_telemetry.csv
+  
